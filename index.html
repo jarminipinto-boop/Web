@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Metadata -->
+    <title>KWTDaunSopCeria - Kelompok Wanita Tani Karang Joang, Balikpapan</title>
+    <meta name="description" content="Website resmi KWT Daun Sop Ceria, KM 21 Karang Joang, Balikpapan Utara. Agribisnis sayuran segar, inovasi vertical garden, dan olahan Ceria Dragon Candy.">
+    <meta name="keywords" content="KWT Daun Sop Ceria, Kelompok Wanita Tani Balikpapan, Karang Joang, Pertanian Modern Balikpapan, Ceria Dragon Candy, Sayur Segar Balikpapan">
+    <meta name="author" content="KWT Daun Sop Ceria">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="KWTDaunSopCeria - Menanam Harapan, Memanen Kebaikan">
+    <meta property="og:description" content="Profil resmi dan etalase produk Kelompok Wanita Tani Daun Sop Ceria, Karang Joang, Balikpapan Utara.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kwt: {
+                            forest: '#143823',      // Hijau tua pekat berkelas
+                            leaf: '#2A6F45',        // Hijau daun segar
+                            accent: '#48A868',      // Aksen hijau hidup
+                            mint: '#EBF7EE',        // Latar hijau lembut
+                            cream: '#FAF8F5',       // Background hangat natural
+                            sand: '#F2ECE4',        // Aksen cokelat muda natural
+                            earth: '#73573D',       // Sentuhan cokelat tanah
+                            dark: '#1C261F'         // Teks gelap natural
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(250, 248, 245, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-pattern {
+            background: linear-gradient(180deg, rgba(20, 56, 35, 0.75) 0%, rgba(20, 56, 35, 0.9) 100%),
+                        url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        .card-hover {
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -10px rgba(20, 56, 35, 0.12);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 9px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A6F45;
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #143823;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-kwt-cream text-kwt-dark antialiased selection:bg-kwt-accent selection:text-white">
+
+    <!-- ===================================================
+        HEADER & NAVBAR (DESKTOP & MOBILE)
+    =================================================== -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center justify-between h-20 px-6 my-2 rounded-2xl glass-nav border border-white/60 shadow-sm transition-all duration-300" id="navContainer">
+                
+                <!-- Brand / Logo -->
+                <a href="#beranda" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-kwt-forest flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-seedling text-kwt-accent text-xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-xl tracking-tight text-kwt-forest leading-none">
+                            KWT<span class="text-kwt-leaf font-bold">DaunSopCeria</span>
+                        </span>
+                        <span class="text-[10px] tracking-wider uppercase font-semibold text-kwt-earth mt-1">
+                            Karang Joang, Balikpapan
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-7">
+                    <a href="#beranda" class="text-sm font-semibold text-kwt-forest hover:text-kwt-accent transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-sm font-semibold text-kwt-dark/80 hover:text-kwt-forest transition-colors">Tentang Kami</a>
+                    <a href="#kebun" class="text-sm font-semibold text-kwt-dark/80 hover:text-kwt-forest transition-colors">Kebun Kami</a>
+                    <a href="#produk" class="text-sm font-semibold text-kwt-dark/80 hover:text-kwt-forest transition-colors">Produk</a>
+                    <a href="#kegiatan" class="text-sm font-semibold text-kwt-dark/80 hover:text-kwt-forest transition-colors">Kegiatan</a>
+                    <a href="#pencapaian" class="text-sm font-semibold text-kwt-dark/80 hover:text-kwt-forest transition-colors">Pencapaian</a>
+                    <a href="#galeri" class="text-sm font-semibold text-kwt-dark/80 hover:text-kwt-forest transition-colors">Galeri</a>
+                    <a href="#kontak" class="text-sm font-semibold text-kwt-dark/80 hover:text-kwt-forest transition-colors">Kontak</a>
+                </div>
+
+                <!-- CTA Action Button -->
+                <div class="hidden lg:flex items-center">
+                    <a href="#kebun" class="inline-flex items-center gap-2 bg-kwt-leaf hover:bg-kwt-forest text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-compass text-xs"></i>
+                        <span>Jelajahi Kebun Kami</span>
+                    </a>
+                </div>
+
+                <!-- Hamburger Button (Mobile) -->
+                <button id="mobileMenuBtn" aria-label="Buka Menu" class="lg:hidden p-2.5 rounded-xl text-kwt-forest hover:bg-kwt-mint transition-colors">
+                    <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="lg:hidden hidden bg-white/95 backdrop-blur-md border-b border-kwt-sand px-6 py-6 shadow-xl transition-all">
+            <div class="flex flex-col gap-4 text-base font-semibold text-kwt-forest">
+                <a href="#beranda" class="mobile-nav-link py-2 border-b border-kwt-sand/40">Beranda</a>
+                <a href="#tentang" class="mobile-nav-link py-2 border-b border-kwt-sand/40">Tentang Kami</a>
+                <a href="#kebun" class="mobile-nav-link py-2 border-b border-kwt-sand/40">Kebun Kami</a>
+                <a href="#produk" class="mobile-nav-link py-2 border-b border-kwt-sand/40">Produk</a>
+                <a href="#kegiatan" class="mobile-nav-link py-2 border-b border-kwt-sand/40">Kegiatan</a>
+                <a href="#pencapaian" class="mobile-nav-link py-2 border-b border-kwt-sand/40">Pencapaian</a>
+                <a href="#galeri" class="mobile-nav-link py-2 border-b border-kwt-sand/40">Galeri</a>
+                <a href="#kontak" class="mobile-nav-link py-2">Kontak</a>
+                <a href="#kebun" class="mobile-nav-link mt-2 text-center bg-kwt-leaf text-white py-3 rounded-xl shadow-md">
+                    Jelajahi Kebun Kami
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ===================================================
+        C. HALAMAN BERANDA (HERO SECTION)
+    =================================================== -->
+    <section id="beranda" class="relative min-h-[92vh] flex items-center pt-28 pb-20 hero-pattern text-white overflow-hidden">
+        <!-- Floating Subtle Accents -->
+        <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-3xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-kwt-mint text-xs sm:text-sm font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-kwt-accent animate-pulse"></span>
+                    <span>Kelompok Wanita Tani • Balikpapan Utara</span>
+                </div>
+
+                <!-- Main Titles -->
+                <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight mb-4">
+                    Selamat Datang di <br>
+                    <span class="text-kwt-accent underline decoration-white/20 decoration-wavy underline-offset-8">KWT Daun Sop Ceria</span>
+                </h1>
+
+                <p class="text-xl sm:text-2xl font-light italic text-emerald-100 mb-6 font-heading">
+                    &ldquo;Menanam Harapan, Memanen Kebaikan, Membangun Kemandirian.&rdquo;
+                </p>
+
+                <p class="text-base sm:text-lg text-emerald-50/90 leading-relaxed font-light mb-10 max-w-2xl">
+                    KWT Daun Sop Ceria merupakan kelompok wanita tani yang bergerak dalam bidang pertanian, perkebunan, dan pengembangan produk olahan hasil pertanian lokal. Berlokasi di KM 21, Karang Joang, Balikpapan Utara, kelompok ini berkomitmen untuk mengoptimalkan potensi pertanian lokal melalui budidaya sayuran, pemanfaatan lahan terbatas, inovasi produk, serta pemberdayaan ekonomi perempuan.
+                </p>
+
+                <!-- Action CTA -->
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#tentang" class="inline-flex items-center justify-center gap-2.5 bg-white text-kwt-forest hover:bg-kwt-mint font-bold px-7 py-3.5 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                        <span>Mengenal Kami</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#produk" class="inline-flex items-center justify-center gap-2.5 bg-kwt-leaf/80 hover:bg-kwt-leaf border border-white/20 text-white font-bold px-7 py-3.5 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-basket-shopping text-sm"></i>
+                        <span>Lihat Produk Kami</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHT 3 PILAR UNGGULAN -->
+    <section class="relative -mt-10 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Pilar 1 -->
+            <div class="bg-white p-7 rounded-2xl border border-kwt-sand/80 shadow-md card-hover flex items-start gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-kwt-mint flex-shrink-0 flex items-center justify-center text-kwt-leaf text-2xl">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div>
+                    <h3 class="font-heading font-bold text-lg text-kwt-forest mb-1.5">Pertanian Berkelanjutan</h3>
+                    <p class="text-sm text-kwt-dark/70 leading-relaxed">
+                        Penerapan teknik bertani ramah lingkungan, efisiensi hara, dan inovasi pemanfaatan vertical garden bambu di lahan terukur.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pilar 2 -->
+            <div class="bg-white p-7 rounded-2xl border border-kwt-sand/80 shadow-md card-hover flex items-start gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-kwt-mint flex-shrink-0 flex items-center justify-center text-kwt-leaf text-2xl">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+                <div>
+                    <h3 class="font-heading font-bold text-lg text-kwt-forest mb-1.5">Produk Lokal Berkualitas</h3>
+                    <p class="text-sm text-kwt-dark/70 leading-relaxed">
+                        Sayuran segar pilihan, sayur siap masak higienis, serta olahan bernilai tambah seperti permen buah naga merah.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pilar 3 -->
+            <div class="bg-white p-7 rounded-2xl border border-kwt-sand/80 shadow-md card-hover flex items-start gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-kwt-mint flex-shrink-0 flex items-center justify-center text-kwt-leaf text-2xl">
+                    <i class="fa-solid fa-people-roof"></i>
+                </div>
+                <div>
+                    <h3 class="font-heading font-bold text-lg text-kwt-forest mb-1.5">Pemberdayaan Perempuan</h3>
+                    <p class="text-sm text-kwt-dark/70 leading-relaxed">
+                        Wadah penggerak kemandirian sosial-ekonomi bagi ibu-ibu dan wanita tani di lingkungan RT 41 Karang Joang.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ===================================================
+        D. HALAMAN TENTANG KAMI
+    =================================================== -->
+    <section id="tentang" class="py-24 bg-kwt-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Visual Col -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                            <img src="https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=900&q=80" 
+                                 alt="Aktivitas KWT Daun Sop Ceria" 
+                                 class="w-full h-[460px] object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <!-- Mini Card Overlaid -->
+                        <div class="absolute -bottom-6 -right-4 sm:right-6 bg-white p-5 rounded-2xl shadow-xl border border-kwt-sand/60 max-w-[240px]">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-kwt-forest flex items-center justify-center text-kwt-accent">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-kwt-forest">Lokasi Komunitas</h4>
+                                    <p class="text-[11px] text-kwt-dark/70">KM 21, RT 41 Karang Joang</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Col -->
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-2 text-kwt-leaf font-bold text-xs uppercase tracking-widest mb-3">
+                        <i class="fa-solid fa-circle text-[8px]"></i>
+                        <span>Profil Kelompok Tani</span>
+                    </div>
+                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-kwt-forest mb-6 leading-tight">
+                        Mengenal KWT Daun Sop Ceria
+                    </h2>
+                    
+                    <div class="space-y-4 text-kwt-dark/80 text-base leading-relaxed mb-8">
+                        <p>
+                            Kelompok Wanita Tani (KWT) Daun Sop Ceria merupakan kelompok masyarakat perempuan yang berfokus pada pengelolaan dan pengembangan potensi pertanian lokal di kawasan KM 21, RT 41, Kelurahan Karang Joang, Balikpapan Utara.
+                        </p>
+                        <p>
+                            KWT Daun Sop Ceria memiliki potensi dalam pengembangan komoditas sayuran dan buah-buahan. Hasil pertanian dimanfaatkan untuk kebutuhan rumah tangga maupun dikembangkan menjadi produk yang memiliki nilai ekonomi.
+                        </p>
+                        <p>
+                            Melalui berbagai kegiatan pemberdayaan, kelompok ini terus mengembangkan keterampilan dalam budidaya tanaman, optimalisasi lahan, pengolahan hasil pertanian, pengemasan produk, dan pemasaran.
+                        </p>
+                    </div>
+
+                    <!-- Visi & Misi Box -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                        <!-- Visi -->
+                        <div class="bg-white p-6 rounded-2xl border border-kwt-sand shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-kwt-mint text-kwt-leaf flex items-center justify-center font-bold">
+                                    <i class="fa-regular fa-eye"></i>
+                                </span>
+                                <h3 class="font-heading font-bold text-lg text-kwt-forest">Visi</h3>
+                            </div>
+                            <p class="text-sm text-kwt-dark/80 leading-relaxed">
+                                Menjadi kelompok wanita tani yang mandiri, produktif, kreatif, dan berdaya saing melalui pengembangan pertanian berkelanjutan serta inovasi produk lokal.
+                            </p>
+                        </div>
+
+                        <!-- Misi Summary Card -->
+                        <div class="bg-kwt-forest text-white p-6 rounded-2xl shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-white/10 text-kwt-accent flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-bullseye"></i>
+                                </span>
+                                <h3 class="font-heading font-bold text-lg text-white">Misi Utama</h3>
+                            </div>
+                            <p class="text-xs text-white/80 leading-relaxed mb-3">
+                                Berfokus pada 6 pilar gerak: pemanfaatan lahan, diversifikasi sayur & buah, peningkatan skill olahan, penciptaan nilai tambah, perluasan pasar, serta ketahanan pangan keluarga.
+                            </p>
+                            <a href="#daftar-misi" onclick="toggleMisiDetail()" class="text-xs font-semibold text-kwt-accent hover:underline flex items-center gap-1.5 cursor-pointer">
+                                <span>Lihat 6 Butir Misi Lengkap</span>
+                                <i class="fa-solid fa-angle-down text-[10px]" id="misiChevron"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 6 Misi Accordion Details (Hidden by default, expandable) -->
+                    <div id="misiFullList" class="hidden mt-6 bg-white p-6 rounded-2xl border border-kwt-sand">
+                        <h4 class="font-heading font-bold text-kwt-forest text-sm mb-4">6 Butir Misi KWT Daun Sop Ceria:</h4>
+                        <ol class="space-y-2.5 text-sm text-kwt-dark/80 list-decimal list-inside">
+                            <li>Mengoptimalkan pemanfaatan lahan pertanian secara produktif.</li>
+                            <li>Mengembangkan budidaya sayuran dan buah-buahan.</li>
+                            <li>Meningkatkan keterampilan anggota dalam pengolahan hasil pertanian.</li>
+                            <li>Menciptakan produk lokal yang memiliki nilai tambah.</li>
+                            <li>Memperluas pemasaran produk pertanian.</li>
+                            <li>Mendukung ketahanan pangan dan pemberdayaan ekonomi perempuan.</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ===================================================
+        E. HALAMAN KEBUN KAMI (KOMODITAS & VERTICAL GARDEN)
+    =================================================== -->
+    <section id="kebun" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Title -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-kwt-leaf tracking-widest uppercase bg-kwt-mint px-4 py-1.5 rounded-full inline-block mb-3">
+                    Agrikultur Produktif
+                </span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-kwt-forest mb-4">
+                    Kebun Produktif KWT Daun Sop Ceria
+                </h2>
+                <p class="text-base sm:text-lg text-kwt-dark/70 leading-relaxed">
+                    Kebun KWT Daun Sop Ceria merupakan kawasan pertanian masyarakat yang dimanfaatkan untuk kegiatan budidaya berbagai jenis sayuran dan buah-buahan. Kebun ini dikembangkan sebagai tempat produktif untuk menghasilkan bahan pangan segar sekaligus menjadi sarana pembelajaran dan pengembangan pertanian masyarakat.
+                </p>
+            </div>
+
+            <!-- Komoditas Pertanian Grid (9 Komoditas) -->
+            <div class="mb-20">
+                <div class="flex items-center justify-between mb-8 border-b border-kwt-sand pb-4">
+                    <h3 class="font-heading font-bold text-2xl text-kwt-forest flex items-center gap-2">
+                        <i class="fa-solid fa-wheat-awn text-kwt-leaf"></i>
+                        <span>Komoditas Unggulan Kebun</span>
+                    </h3>
+                    <span class="text-xs text-kwt-dark/60 font-medium">9 Komoditas Utama Terdata</span>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-5 sm:gap-6">
+                    
+                    <!-- 1. Selada -->
+                    <div class="group bg-kwt-cream rounded-2xl overflow-hidden border border-kwt-sand/80 card-hover">
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=600&q=80" alt="Selada Segar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-kwt-forest text-xs font-bold px-2.5 py-1 rounded-md">Sayuran Daun</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-heading font-bold text-base text-kwt-forest">Selada</h4>
+                            <p class="text-xs text-kwt-dark/60 mt-1">Ditanam segar, renyah, dan cocok untuk hidangan salad maupun lalapan.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Bayam -->
+                    <div class="group bg-kwt-cream rounded-2xl overflow-hidden border border-kwt-sand/80 card-hover">
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=600&q=80" alt="Bayam Segar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-kwt-forest text-xs font-bold px-2.5 py-1 rounded-md">Sayuran Daun</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-heading font-bold text-base text-kwt-forest">Bayam</h4>
+                            <p class="text-xs text-kwt-dark/60 mt-1">Kaya zat besi, dipanen berkala untuk kebutuhan konsumsi sehat keluarga.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Sawi -->
+                    <div class="group bg-kwt-cream rounded-2xl overflow-hidden border border-kwt-sand/80 card-hover">
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Sawi Segar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-kwt-forest text-xs font-bold px-2.5 py-1 rounded-md">Sayuran Daun</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-heading font-bold text-base text-kwt-forest">Sawi</h4>
+                            <p class="text-xs text-kwt-dark/60 mt-1">Komoditas andalan media tanah dan percontohan awal vertical garden.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Kangkung -->
+                    <div class="group bg-kwt-cream rounded-2xl overflow-hidden border border-kwt-sand/80 card-hover">
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=600&q=80" alt="Kangkung Kebun" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-kwt-forest text-xs font-bold px-2.5 py-1 rounded-md">Sayuran Daun</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-heading font-bold text-base text-kwt-forest">Kangkung</h4>
+                            <p class="text-xs text-kwt-dark/60 mt-1">Tumbuh subur dan cepat panen, favorit masyarakat untuk hidangan tumis.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Seledri -->
+                    <div class="group bg-kwt-cream rounded-2xl overflow-hidden border border-kwt-sand/80 card-hover">
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?auto=format&fit=crop&w=600&q=80" alt="Seledri Segar Daun Sop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-kwt-forest text-xs font-bold px-2.5 py-1 rounded-md">Bumbu & Daun Sop</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-heading font-bold text-base text-kwt-forest">Seledri</h4>
+                            <p class="text-xs text-kwt-dark/60 mt-1">Identitas khas KWT Daun Sop Ceria, aroma harum dan segar pelengkap sup.</p>
+                        </div>
+                    </div>
+
+                    <!-- 6. Cabai -->
+                    <div class="group bg-kwt-cream rounded-2xl overflow-hidden border border-kwt-sand/80 card-hover">
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1588252303782-cb80119abd6d?auto=format&fit=crop&w=600&q=80" alt="Cabai Segar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-kwt-forest text-xs font-bold px-2.5 py-1 rounded-md">Hortikultura</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-heading font-bold text-base text-kwt-forest">Cabai</h4>
+                            <p class="text-xs text-kwt-dark/60 mt-1">Kebutuhan pokok dapur dengan tingkat kepedasan dan kualitas segar.</p>
+                        </div>
+                    </div>
+
+                    <!-- 7. Salak -->
+                    <div class="group bg-kwt-cream rounded-2xl overflow-hidden border border-kwt-sand/80 card-hover">
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=600&q=80" alt="Buah Salak" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-kwt-forest text-xs font-bold px-2.5 py-1 rounded-md">Tanaman Buah</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-heading font-bold text-base text-kwt-forest">Salak</h4>
+                            <p class="text-xs text-kwt-dark/60 mt-1">Buah tropis bernilai ekonomi dengan rasa manis dan daging buah renyah.</p>
+                        </div>
+                    </div>
+
+                    <!-- 8. Jambu Kristal -->
+                    <div class="group bg-kwt-cream rounded-2xl overflow-hidden border border-kwt-sand/80 card-hover">
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1536511135899-738cb46a94aa?auto=format&fit=crop&w=600&q=80" alt="Jambu Kristal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-kwt-forest text-xs font-bold px-2.5 py-1 rounded-md">Tanaman Buah</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-heading font-bold text-base text-kwt-forest">Jambu Kristal</h4>
+                            <p class="text-xs text-kwt-dark/60 mt-1">Minim biji, tekstur padat renyah, dan digemari oleh berbagai kalangan.</p>
+                        </div>
+                    </div>
+
+                    <!-- 9. Buah Naga -->
+                    <div class="group bg-kwt-cream rounded-2xl overflow-hidden border border-kwt-sand/80 card-hover">
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1527325678964-54921661f888?auto=format&fit=crop&w=600&q=80" alt="Buah Naga Merah" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-kwt-leaf text-white text-xs font-bold px-2.5 py-1 rounded-md">Komoditas Primadona</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-heading font-bold text-base text-kwt-forest">Buah Naga</h4>
+                            <p class="text-xs text-kwt-dark/60 mt-1">Buah naga merah unggulan yang menjadi bahan baku utama produk olahan permen.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Inovasi Vertical Garden -->
+            <div class="bg-gradient-to-br from-kwt-mint via-white to-kwt-sand/40 rounded-3xl p-8 sm:p-12 border border-kwt-sand">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    
+                    <div class="lg:col-span-7">
+                        <div class="inline-flex items-center gap-2 text-kwt-leaf text-xs font-bold uppercase tracking-wider mb-3">
+                            <i class="fa-solid fa-arrows-up-down text-kwt-accent"></i>
+                            <span>Efisiensi Ruang Terbatas</span>
+                        </div>
+                        <h3 class="font-heading font-extrabold text-2xl sm:text-3xl text-kwt-forest mb-4">
+                            Inovasi Pertanian dengan Vertical Garden
+                        </h3>
+                        <p class="text-base text-kwt-dark/80 leading-relaxed mb-4">
+                            Vertical Garden merupakan metode budidaya tanaman dengan memanfaatkan ruang vertikal sehingga lahan terbatas tetap dapat digunakan secara produktif.
+                        </p>
+                        <p class="text-sm text-kwt-dark/70 leading-relaxed mb-6">
+                            KWT Daun Sop Ceria mengembangkan vertical garden menggunakan kerangka sederhana berbahan bambu sebagai media tanam sayuran. Sawi menjadi salah satu tanaman pertama yang dibudidayakan melalui metode ini. Inovasi ini bertujuan meningkatkan kapasitas lahan tanam, mengoptimalkan ruang, serta mendukung ketahanan pangan masyarakat.
+                        </p>
+
+                        <!-- Poin Plus Kerangka Bambu -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-kwt-sand shadow-sm">
+                                <i class="fa-solid fa-recycle text-kwt-leaf text-lg"></i>
+                                <span class="text-xs font-semibold text-kwt-forest">Material Bambu Alami Lokal</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-kwt-sand shadow-sm">
+                                <i class="fa-solid fa-layer-group text-kwt-leaf text-lg"></i>
+                                <span class="text-xs font-semibold text-kwt-forest">Multi-tingkat Hemat Lahan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden shadow-md h-48">
+                                <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80" alt="Inovasi Rak Tanaman Bambu" class="w-full h-full object-cover">
+                            </div>
+                            <div class="bg-kwt-forest text-white p-4 rounded-2xl text-center">
+                                <span class="block text-2xl font-bold font-heading text-kwt-accent">Sawi</span>
+                                <span class="text-[11px] text-white/80">Tanaman Perdana Vertical Garden</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-6">
+                            <div class="bg-white p-4 rounded-2xl border border-kwt-sand text-center">
+                                <span class="block text-xl font-bold font-heading text-kwt-forest">Solusi</span>
+                                <span class="text-[11px] text-kwt-dark/70">Lahan Pekarangan Sempit</span>
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-md h-48">
+                                <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=600&q=80" alt="Budidaya Sayuran Vertikal" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ===================================================
+        F. HALAMAN PRODUK KAMI
+    =================================================== -->
+    <section id="produk" class="py-24 bg-kwt-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-kwt-leaf tracking-widest uppercase bg-white border border-kwt-sand px-4 py-1.5 rounded-full inline-block mb-3">
+                    Katalog Hasil Karya
+                </span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-kwt-forest mb-4">
+                    Produk Unggulan KWT Daun Sop Ceria
+                </h2>
+                <p class="text-sm sm:text-base text-kwt-dark/70">
+                    Dari kebun mandiri hingga olahan bernilai tambah, berikut adalah produk-produk yang dihasilkan dengan dedikasi anggota kelompok.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Produk 1: Sayuran Segar -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-kwt-sand shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Sayuran Segar KWT" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 bg-kwt-forest/90 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">
+                                Panen Berkala
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-heading font-bold text-xl text-kwt-forest mb-2">1. Sayuran Segar</h3>
+                            <p class="text-sm text-kwt-dark/70 leading-relaxed mb-4">
+                                Sayuran segar hasil budidaya Kebun KWT Daun Sop Ceria yang dimanfaatkan untuk kebutuhan pangan rumah tangga dan pemasaran lokal.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 pt-2 border-t border-kwt-sand/60">
+                                <span class="text-[11px] bg-kwt-mint text-kwt-leaf px-2.5 py-1 rounded-md font-medium">Bebas Pestisida Berlebih</span>
+                                <span class="text-[11px] bg-kwt-mint text-kwt-leaf px-2.5 py-1 rounded-md font-medium">Dipetik Langsung</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openProductModal('Sayuran Segar', 'Sayuran segar hasil budidaya kebun KWT Daun Sop Ceria yang dipetik langsung saat dipesan. Cocok untuk konsumsi harian keluarga yang sehat dan higienis. Informasi ketersediaan panen dapat ditanyakan langsung kepada pengelola.')" class="w-full py-2.5 rounded-xl border border-kwt-leaf text-kwt-leaf hover:bg-kwt-leaf hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>Informasi Produk</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 2: Paket Sayur Praktis (Ready-to-Cook) -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-kwt-sand shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=800&q=80" alt="Paket Sayur Siap Masak" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 bg-kwt-leaf/90 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">
+                                Ready-to-Cook
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-heading font-bold text-xl text-kwt-forest mb-2">2. Paket Sayur Praktis</h3>
+                            <p class="text-sm text-kwt-dark/70 leading-relaxed mb-3">
+                                Paket sayuran praktis yang diolah melalui proses pencucian, pemotongan, penataan, dan pengemasan dengan memperhatikan kebersihan serta kesegaran produk.
+                            </p>
+                            
+                            <!-- Varian -->
+                            <div class="space-y-1.5 mb-4">
+                                <span class="text-xs font-bold text-kwt-forest block">Varian Paket Masakan:</span>
+                                <ul class="text-xs text-kwt-dark/80 space-y-1 pl-1">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kwt-accent text-[10px]"></i> Paket Sayur Sop (dilengkapi seledri khas)</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kwt-accent text-[10px]"></i> Paket Sayur Bening</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kwt-accent text-[10px]"></i> Paket Sayur Lodeh</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openProductModal('Paket Sayur Praktis (Ready-to-Cook)', 'Paket sayur higienis siap olah tanpa repot mengupas dan memotong. Dikemas rapi per menu masakan rumahan favorit keluarga: Sop, Bening, dan Lodeh.')" class="w-full py-2.5 rounded-xl border border-kwt-leaf text-kwt-leaf hover:bg-kwt-leaf hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>Informasi Produk</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 3: Ceria Dragon Candy -->
+                <div class="bg-white rounded-3xl overflow-hidden border-2 border-kwt-accent/40 shadow-md card-hover flex flex-col justify-between relative">
+                    <div class="absolute top-3 right-3 z-10 bg-rose-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-sm">
+                        Produk Inovasi Baru
+                    </div>
+                    <div>
+                        <div class="h-60 overflow-hidden relative">
+                            <!-- Visual olahan permen buah naga -->
+                            <img src="https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?auto=format&fit=crop&w=800&q=80" alt="Ceria Dragon Candy" class="w-full h-full object-cover">
+                            <div class="absolute bottom-3 left-3 bg-kwt-forest/90 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">
+                                Olahan Buah Naga Merah
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-heading font-bold text-xl text-kwt-forest mb-2">3. Ceria Dragon Candy</h3>
+                            <p class="text-sm text-kwt-dark/70 leading-relaxed mb-4">
+                                Ceria Dragon Candy merupakan produk inovasi olahan buah naga merah yang dikembangkan oleh KWT Daun Sop Ceria berupa permen lunak (<em>soft candy</em>) dengan warna merah alami dan tekstur kenyal.
+                            </p>
+
+                            <div class="bg-kwt-mint/60 p-3.5 rounded-xl border border-kwt-leaf/20 mb-3">
+                                <span class="text-xs font-bold text-kwt-forest block mb-1.5">Keunggulan Utama:</span>
+                                <ul class="text-[11px] text-kwt-dark/80 space-y-1">
+                                    <li>• Menggunakan buah naga merah segar sebagai bahan utama</li>
+                                    <li>• Warna merah alami murni dari buah tanpa pewarna buatan</li>
+                                    <li>• Cita rasa manis seimbang dengan sedikit sentuhan asam segar</li>
+                                    <li>• Tekstur kenyal pas dan masa simpan lebih lama</li>
+                                    <li>• Dikemas eksklusif dengan identitas resmi merek</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openProductModal('Ceria Dragon Candy', 'Permen lunak buah naga merah (soft candy) inovatif khas KWT Daun Sop Ceria. Dikembangkan melalui riset formulasi dan pelatihan pengolahan pangan untuk meningkatkan nilai tambah komoditas lokal.')" class="w-full py-2.5 rounded-xl bg-kwt-leaf hover:bg-kwt-forest text-white font-semibold text-xs shadow-md transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-candy-cane"></i>
+                            <span>Detail Inovasi & Kemasan</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Catatan Pengelola (Sesuai Panduan) -->
+            <div class="mt-8 text-center text-xs text-kwt-dark/50 italic">
+                *Catatan: Informasi harga resmi, ketersediaan batch harian, dan tata cara pemesanan dapat dikonfirmasi langsung kepada pihak pengurus KWT.
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ===================================================
+        G. HALAMAN KEGIATAN & PENGEMBANGAN KWT
+    =================================================== -->
+    <section id="kegiatan" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-kwt-leaf tracking-widest uppercase bg-kwt-mint px-4 py-1.5 rounded-full inline-block mb-3">
+                    Agenda & Tindakan Nyata
+                </span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-kwt-forest mb-4">
+                    Aktivitas dan Pengembangan KWT
+                </h2>
+                <p class="text-sm sm:text-base text-kwt-dark/70">
+                    Berbagai pilar kegiatan pembinaan, pengolahan inovatif, dan penataan fasilitas kebun yang dilakukan secara berkesinambungan.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Kegiatan 1 -->
+                <div class="border border-kwt-sand rounded-2xl overflow-hidden bg-kwt-cream/40 card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=700&q=80" alt="Budidaya Tanaman" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-8 h-8 rounded-lg bg-kwt-mint text-kwt-leaf flex items-center justify-center font-bold text-sm mb-3">1</div>
+                        <h3 class="font-heading font-bold text-lg text-kwt-forest mb-2">Budidaya Tanaman</h3>
+                        <p class="text-xs text-kwt-dark/70 leading-relaxed">
+                            Kegiatan penanaman dan pemeliharaan sayuran serta buah-buahan untuk meningkatkan produktivitas kebun secara berkelanjutan di lingkungan KM 21.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kegiatan 2 -->
+                <div class="border border-kwt-sand rounded-2xl overflow-hidden bg-kwt-cream/40 card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=700&q=80" alt="Vertical Garden Bambu" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-8 h-8 rounded-lg bg-kwt-mint text-kwt-leaf flex items-center justify-center font-bold text-sm mb-3">2</div>
+                        <h3 class="font-heading font-bold text-lg text-kwt-forest mb-2">Pengembangan Vertical Garden</h3>
+                        <p class="text-xs text-kwt-dark/70 leading-relaxed">
+                            Pembuatan media tanam vertikal berbahan bambu untuk memanfaatkan lahan terbatas dan meningkatkan kapasitas tanam sayuran seperti sawi.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kegiatan 3 -->
+                <div class="border border-kwt-sand rounded-2xl overflow-hidden bg-kwt-cream/40 card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=80" alt="Pelatihan Pengolahan Pangan Buah Naga" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-8 h-8 rounded-lg bg-kwt-mint text-kwt-leaf flex items-center justify-center font-bold text-sm mb-3">3</div>
+                        <h3 class="font-heading font-bold text-lg text-kwt-forest mb-2">Pengolahan Buah Naga</h3>
+                        <p class="text-xs text-kwt-dark/70 leading-relaxed">
+                            Pelatihan pengolahan buah naga merah menjadi permen lunak Ceria Dragon Candy melalui tahapan persiapan bahan, pemasakan, pencetakan, pengeringan, hingga pengemasan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kegiatan 4 -->
+                <div class="border border-kwt-sand rounded-2xl overflow-hidden bg-kwt-cream/40 card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=700&q=80" alt="Pengemasan Sayuran Siap Masak" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-8 h-8 rounded-lg bg-kwt-mint text-kwt-leaf flex items-center justify-center font-bold text-sm mb-3">4</div>
+                        <h3 class="font-heading font-bold text-lg text-kwt-forest mb-2">Pengemasan Produk Sayuran</h3>
+                        <p class="text-xs text-kwt-dark/70 leading-relaxed">
+                            Pengolahan minimal hasil panen menjadi paket sayuran praktis siap masak yang bersih, rapi, dan menarik bagi kenyamanan konsumen modern.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kegiatan 5 -->
+                <div class="border border-kwt-sand rounded-2xl overflow-hidden bg-kwt-cream/40 card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=700&q=80" alt="Wisata Edukasi Pertanian Anak Sekolah" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-8 h-8 rounded-lg bg-kwt-mint text-kwt-leaf flex items-center justify-center font-bold text-sm mb-3">5</div>
+                        <h3 class="font-heading font-bold text-lg text-kwt-forest mb-2">Pengembangan Wisata Edukasi</h3>
+                        <p class="text-xs text-kwt-dark/70 leading-relaxed">
+                            Pengembangan kebun sebagai tempat pembelajaran pertanian bagi masyarakat dan pengunjung, termasuk anak-anak sekolah yang ingin mengenal dunia tani.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kegiatan 6 -->
+                <div class="border border-kwt-sand rounded-2xl overflow-hidden bg-kwt-cream/40 card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=700&q=80" alt="Fasilitas dan Tata Ruang Kebun" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-8 h-8 rounded-lg bg-kwt-mint text-kwt-leaf flex items-center justify-center font-bold text-sm mb-3">6</div>
+                        <h3 class="font-heading font-bold text-lg text-kwt-forest mb-2">Peningkatan Fasilitas Kebun</h3>
+                        <p class="text-xs text-kwt-dark/70 leading-relaxed mb-3">
+                            Pengembangan sarana fisik penunjang kenyamanan lingkungan kebun secara berkala:
+                        </p>
+                        <ul class="text-[11px] text-kwt-dark/80 grid grid-cols-2 gap-1 font-medium">
+                            <li><i class="fa-solid fa-angle-right text-kwt-accent"></i> Pintu masuk/gate</li>
+                            <li><i class="fa-solid fa-angle-right text-kwt-accent"></i> Papan nama tanaman</li>
+                            <li><i class="fa-solid fa-angle-right text-kwt-accent"></i> Lampu penerangan</li>
+                            <li><i class="fa-solid fa-angle-right text-kwt-accent"></i> Tempat sampah tertata</li>
+                            <li class="col-span-2"><i class="fa-solid fa-angle-right text-kwt-accent"></i> Penataan estetika area kebun</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ===================================================
+        H. HALAMAN PENCAPAIAN
+    =================================================== -->
+    <section id="pencapaian" class="py-24 bg-kwt-forest text-white relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-kwt-leaf/20 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-kwt-accent tracking-widest uppercase bg-white/10 px-4 py-1.5 rounded-full inline-block mb-3 border border-white/10">
+                    Tolok Ukur Efektivitas
+                </span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-4">
+                    Dampak dan Pencapaian Program
+                </h2>
+                <p class="text-sm sm:text-base text-emerald-100/80">
+                    Hasil nyata program pendampingan dan implementasi inovasi di KWT Daun Sop Ceria.
+                </p>
+            </div>
+
+            <!-- 4 Metrics Stats Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                
+                <!-- Stat 1 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md text-center hover:bg-white/10 transition-all">
+                    <span class="block font-heading font-extrabold text-4xl sm:text-5xl text-kwt-accent mb-2">90%</span>
+                    <h4 class="font-semibold text-sm text-white mb-1">Pemahaman Pengolahan</h4>
+                    <p class="text-xs text-emerald-100/70">
+                        Peserta memahami tahapan pengolahan buah naga menjadi permen lunak secara utuh.
+                    </p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md text-center hover:bg-white/10 transition-all">
+                    <span class="block font-heading font-extrabold text-4xl sm:text-5xl text-kwt-accent mb-2">85%</span>
+                    <h4 class="font-semibold text-sm text-white mb-1">Keterampilan Teknis</h4>
+                    <p class="text-xs text-emerald-100/70">
+                        Peserta terampil dalam penyesuaian formulasi dan teknik pemanasan olahan secara terukur.
+                    </p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md text-center hover:bg-white/10 transition-all">
+                    <span class="block font-heading font-extrabold text-4xl sm:text-5xl text-kwt-accent mb-2">80%</span>
+                    <h4 class="font-semibold text-sm text-white mb-1">Kemandirian Kemasan</h4>
+                    <p class="text-xs text-emerald-100/70">
+                        Peserta mampu melakukan pengemasan dan pelabelan produk secara mandiri dan higienis.
+                    </p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md text-center hover:bg-white/10 transition-all">
+                    <span class="block font-heading font-extrabold text-4xl sm:text-5xl text-kwt-accent mb-2">21 Hari</span>
+                    <h4 class="font-semibold text-sm text-white mb-1">Daya Tahan Simpan</h4>
+                    <p class="text-xs text-emerald-100/70">
+                        Ketahanan simpan permen hasil formulasi kedua berdasarkan hasil kegiatan pengujian.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Closing Narration Box -->
+            <div class="bg-white/10 border border-white/15 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto text-center backdrop-blur-md">
+                <i class="fa-solid fa-quote-left text-2xl text-kwt-accent/60 mb-2 block"></i>
+                <p class="text-sm sm:text-base text-emerald-50 leading-relaxed font-light">
+                    Berbagai kegiatan pemberdayaan telah membantu meningkatkan pengetahuan, keterampilan, kreativitas, dan kemampuan kewirausahaan anggota KWT Daun Sop Ceria. Pengembangan pertanian dan inovasi produk diharapkan dapat memberikan manfaat berkelanjutan bagi masyarakat.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ===================================================
+        I. HALAMAN GALERI DOKUMENTASI
+    =================================================== -->
+    <section id="galeri" class="py-24 bg-kwt-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold text-kwt-leaf tracking-widest uppercase bg-white border border-kwt-sand px-4 py-1.5 rounded-full inline-block mb-3">
+                    Dokumentasi Lapangan
+                </span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-kwt-forest mb-4">
+                    Galeri Kegiatan KWT Daun Sop Ceria
+                </h2>
+                <p class="text-sm text-kwt-dark/70">
+                    Sorotan visual dari perkebunan, inovasi media tanam vertikal, pengolahan pangan, hingga suasana belajar bersama masyarakat.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-10" id="galleryFilters">
+                <button class="filter-btn active-filter px-4 py-1.5 rounded-full text-xs font-semibold bg-kwt-forest text-white transition-all" data-category="all">Semua Foto</button>
+                <button class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-kwt-forest hover:bg-kwt-mint transition-all border border-kwt-sand" data-category="kebun">Kondisi Kebun</button>
+                <button class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-kwt-forest hover:bg-kwt-mint transition-all border border-kwt-sand" data-category="tanam">Penanaman & Panen</button>
+                <button class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-kwt-forest hover:bg-kwt-mint transition-all border border-kwt-sand" data-category="vertical">Vertical Garden</button>
+                <button class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-kwt-forest hover:bg-kwt-mint transition-all border border-kwt-sand" data-category="naga">Buah Naga & Olahan</button>
+                <button class="filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-kwt-forest hover:bg-kwt-mint transition-all border border-kwt-sand" data-category="edukasi">Edukasi & Daya</button>
+            </div>
+
+            <!-- Gallery Masonry / Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="galleryGrid">
+                
+                <!-- 1. Kondisi Kebun KWT -->
+                <div class="gallery-item group relative overflow-hidden rounded-2xl bg-white border border-kwt-sand shadow-sm cursor-pointer h-64" data-category="kebun" onclick="openLightbox('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80', 'Kondisi Kebun KWT Daun Sop Ceria', 'Hamparan asri tanaman hortikultura dan sayuran di KM 21 RT 41 Karang Joang.')">
+                    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=700&q=80" alt="Kondisi Kebun KWT" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-kwt-forest/90 via-kwt-forest/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] uppercase font-bold text-kwt-accent">Kebun KWT</span>
+                        <h4 class="text-sm font-bold leading-snug">Kondisi Kebun KWT</h4>
+                    </div>
+                </div>
+
+                <!-- 2. Kegiatan Penanaman -->
+                <div class="gallery-item group relative overflow-hidden rounded-2xl bg-white border border-kwt-sand shadow-sm cursor-pointer h-64" data-category="tanam" onclick="openLightbox('https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=1200&q=80', 'Kegiatan Penanaman Bibit', 'Perawatan dan penyemaian sayuran oleh para anggota wanita tani.')">
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=700&q=80" alt="Kegiatan Penanaman" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-kwt-forest/90 via-kwt-forest/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] uppercase font-bold text-kwt-accent">Penanaman</span>
+                        <h4 class="text-sm font-bold leading-snug">Kegiatan Penanaman</h4>
+                    </div>
+                </div>
+
+                <!-- 3. Vertical Garden -->
+                <div class="gallery-item group relative overflow-hidden rounded-2xl bg-white border border-kwt-sand shadow-sm cursor-pointer h-64" data-category="vertical" onclick="openLightbox('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80', 'Vertical Garden Bambu', 'Implementasi rak bambu berjenjang sebagai media tanam sawi.')">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=700&q=80" alt="Vertical Garden Bambu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-kwt-forest/90 via-kwt-forest/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] uppercase font-bold text-kwt-accent">Vertical Garden</span>
+                        <h4 class="text-sm font-bold leading-snug">Rangka Bambu Vertikal</h4>
+                    </div>
+                </div>
+
+                <!-- 4. Panen Sayuran -->
+                <div class="gallery-item group relative overflow-hidden rounded-2xl bg-white border border-kwt-sand shadow-sm cursor-pointer h-64" data-category="tanam" onclick="openLightbox('https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=1200&q=80', 'Panen Sayuran Hijau', 'Pemetikan daun selada dan seledri segar siap konsumsi.')">
+                    <img src="https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=700&q=80" alt="Panen Sayuran" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-kwt-forest/90 via-kwt-forest/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] uppercase font-bold text-kwt-accent">Panen</span>
+                        <h4 class="text-sm font-bold leading-snug">Panen Sayuran</h4>
+                    </div>
+                </div>
+
+                <!-- 5. Pengolahan Buah Naga -->
+                <div class="gallery-item group relative overflow-hidden rounded-2xl bg-white border border-kwt-sand shadow-sm cursor-pointer h-64" data-category="naga" onclick="openLightbox('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80', 'Pelatihan Olahan Buah Naga', 'Tahapan ekstraksi sari buah naga merah dan proses pemanasan.')">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=80" alt="Pengolahan Buah Naga" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-kwt-forest/90 via-kwt-forest/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] uppercase font-bold text-kwt-accent">Olahan Pangan</span>
+                        <h4 class="text-sm font-bold leading-snug">Pengolahan Buah Naga</h4>
+                    </div>
+                </div>
+
+                <!-- 6. Produk Ceria Dragon Candy -->
+                <div class="gallery-item group relative overflow-hidden rounded-2xl bg-white border border-kwt-sand shadow-sm cursor-pointer h-64" data-category="naga" onclick="openLightbox('https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?auto=format&fit=crop&w=1200&q=80', 'Ceria Dragon Candy', 'Hasil olahan permen lunak buah naga bertekstur kenyal.')">
+                    <img src="https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?auto=format&fit=crop&w=700&q=80" alt="Ceria Dragon Candy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-kwt-forest/90 via-kwt-forest/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] uppercase font-bold text-kwt-accent">Produk Inovasi</span>
+                        <h4 class="text-sm font-bold leading-snug">Ceria Dragon Candy</h4>
+                    </div>
+                </div>
+
+                <!-- 7. Pengemasan Sayuran -->
+                <div class="gallery-item group relative overflow-hidden rounded-2xl bg-white border border-kwt-sand shadow-sm cursor-pointer h-64" data-category="tanam" onclick="openLightbox('https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=1200&q=80', 'Pengemasan Sayur Siap Masak', 'Penyusunan paket sayur sop dan bening higienis.')">
+                    <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=700&q=80" alt="Pengemasan Sayuran" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-kwt-forest/90 via-kwt-forest/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] uppercase font-bold text-kwt-accent">Pengemasan</span>
+                        <h4 class="text-sm font-bold leading-snug">Paket Sayur Praktis</h4>
+                    </div>
+                </div>
+
+                <!-- 8. Kegiatan Edukasi & Pemberdayaan -->
+                <div class="gallery-item group relative overflow-hidden rounded-2xl bg-white border border-kwt-sand shadow-sm cursor-pointer h-64" data-category="edukasi" onclick="openLightbox('https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=80', 'Edukasi dan Pemberdayaan', 'Kunjungan dan sesi transfer pengetahuan bercocok tanam.')">
+                    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=700&q=80" alt="Kegiatan Edukasi dan Pemberdayaan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-kwt-forest/90 via-kwt-forest/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] uppercase font-bold text-kwt-accent">Edukasi</span>
+                        <h4 class="text-sm font-bold leading-snug">Edukasi & Pemberdayaan</h4>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="text-center text-xs text-kwt-dark/60 mt-8">
+                <i class="fa-solid fa-camera mr-1"></i> Klik pada salah satu foto untuk memperbesar tampilan (Lightview).
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ===================================================
+        J. HALAMAN KONTAK DAN LOKASI
+    =================================================== -->
+    <section id="kontak" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-kwt-leaf tracking-widest uppercase bg-kwt-mint px-4 py-1.5 rounded-full inline-block mb-3">
+                    Mari Terhubung
+                </span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-kwt-forest mb-4">
+                    Kunjungi KWT Daun Sop Ceria
+                </h2>
+                <p class="text-sm sm:text-base text-kwt-dark/70">
+                    Kami terbuka untuk masyarakat, konsumen, pelajar, maupun pihak yang ingin mengenal lebih jauh kegiatan pertanian dan produk unggulan KWT Daun Sop Ceria.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- Info Kontak & Lokasi (Col 1-5) -->
+                <div class="lg:col-span-5 space-y-6">
+                    
+                    <!-- Kartu Alamat Lengkap -->
+                    <div class="bg-kwt-cream p-7 rounded-3xl border border-kwt-sand">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-kwt-forest text-kwt-accent flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-kwt-forest">Alamat Lokasi</h3>
+                                <p class="text-xs text-kwt-dark/60">Kawasan Pertanian Komunitas</p>
+                            </div>
+                        </div>
+
+                        <div class="text-sm text-kwt-dark/80 space-y-1 pl-1 font-medium leading-relaxed">
+                            <p class="font-bold text-kwt-forest">KWT Daun Sop Ceria</p>
+                            <p>KM 21, RT 41</p>
+                            <p>Kelurahan Karang Joang</p>
+                            <p>Kecamatan Balikpapan Utara</p>
+                            <p>Kota Balikpapan, Kalimantan Timur</p>
+                        </div>
+                    </div>
+
+                    <!-- Hubungi Resmi Pengelola (Sesuai panduan: tanpa data fiktif) -->
+                    <div class="bg-kwt-mint/50 p-6 rounded-3xl border border-kwt-leaf/20 space-y-3">
+                        <h4 class="font-heading font-bold text-sm text-kwt-forest">Kanal Komunikasi Resmi</h4>
+                        <p class="text-xs text-kwt-dark/70">
+                            Pemesanan produk dan kunjungan kebun dilayani langsung melalui nomor dan media sosial resmi kelompok tani berikut:
+                        </p>
+
+                        <!-- Tombol WhatsApp Dinamis -->
+                        <div class="pt-1">
+                            <button onclick="openChannelNotice('WhatsApp')" class="w-full flex items-center justify-between bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-xl text-xs font-semibold shadow-sm transition-all">
+                                <span class="flex items-center gap-2.5">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                    <span>Pesan via WhatsApp</span>
+                                </span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </button>
+                        </div>
+
+                        <!-- Tombol Instagram Dinamis -->
+                        <div>
+                            <button onclick="openChannelNotice('Instagram')" class="w-full flex items-center justify-between bg-gradient-to-r from-purple-600 via-pink-600 to-amber-600 text-white px-4 py-3 rounded-xl text-xs font-semibold shadow-sm hover:opacity-95 transition-all">
+                                <span class="flex items-center gap-2.5">
+                                    <i class="fa-brands fa-instagram text-lg"></i>
+                                    <span>Ikuti Instagram Resmi</span>
+                                </span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </button>
+                        </div>
+
+                        <p class="text-[10px] text-kwt-dark/50 italic text-center pt-1">
+                            *Tautan direct chat dan akun sosial media akan aktif sesuai rilis nomor pengurus KWT Daun Sop Ceria.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Formulir Pesan Pengunjung (Col 6-12) -->
+                <div class="lg:col-span-7 bg-kwt-cream p-8 sm:p-10 rounded-3xl border border-kwt-sand">
+                    <h3 class="font-heading font-bold text-xl text-kwt-forest mb-2">Formulir Pesan & Pertanyaan Pengunjung</h3>
+                    <p class="text-xs text-kwt-dark/70 mb-6">
+                        Silakan tinggalkan pesan untuk permohonan kunjungan belajar, kerja sama kelompok tani, atau pertanyaan mengenai produk.
+                    </p>
+
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="senderName" class="block text-xs font-semibold text-kwt-forest mb-1.5">Nama Lengkap *</label>
+                                <input type="text" id="senderName" required placeholder="Contoh: Siti Rahmawati" class="w-full px-4 py-3 rounded-xl bg-white border border-kwt-sand text-xs focus:outline-none focus:border-kwt-leaf focus:ring-1 focus:ring-kwt-leaf">
+                            </div>
+                            <div>
+                                <label for="senderEmail" class="block text-xs font-semibold text-kwt-forest mb-1.5">Email / No. Kontak *</label>
+                                <input type="text" id="senderEmail" required placeholder="Email atau nomor WhatsApp Anda" class="w-full px-4 py-3 rounded-xl bg-white border border-kwt-sand text-xs focus:outline-none focus:border-kwt-leaf focus:ring-1 focus:ring-kwt-leaf">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="messageTopic" class="block text-xs font-semibold text-kwt-forest mb-1.5">Topik Pesan</label>
+                            <select id="messageTopic" class="w-full px-4 py-3 rounded-xl bg-white border border-kwt-sand text-xs focus:outline-none focus:border-kwt-leaf focus:ring-1 focus:ring-kwt-leaf text-kwt-dark">
+                                <option value="Informasi Produk & Pemesanan">Informasi Produk Sayuran & Permen Buah Naga</option>
+                                <option value="Kunjungan & Edukasi Pertanian">Kunjungan Kebun / Edukasi Pertanian</option>
+                                <option value="Kerja Sama & Kemitraan">Kerja Sama / Kemitraan Komunitas</option>
+                                <option value="Lainnya">Pertanyaan Umum Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="messageBody" class="block text-xs font-semibold text-kwt-forest mb-1.5">Pesan atau Pertanyaan *</label>
+                            <textarea id="messageBody" rows="4" required placeholder="Tuliskan pesan Anda secara lengkap di sini..." class="w-full px-4 py-3 rounded-xl bg-white border border-kwt-sand text-xs focus:outline-none focus:border-kwt-leaf focus:ring-1 focus:ring-kwt-leaf"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-kwt-leaf hover:bg-kwt-forest text-white py-3.5 rounded-xl font-semibold text-xs shadow-md transition-all flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <span>Kirim Pesan Sekarang</span>
+                        </button>
+                    </form>
+
+                    <div id="formSuccessAlert" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs">
+                        <i class="fa-solid fa-circle-check mr-1.5 text-emerald-600"></i>
+                        Terima kasih! Pesan Anda telah tersimpan dan akan segera diteruskan kepada pengurus KWT Daun Sop Ceria.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Peta Google Maps Embed (Karang Joang, Balikpapan Utara) -->
+            <div class="mt-12 rounded-3xl overflow-hidden border border-kwt-sand shadow-sm">
+                <div class="bg-kwt-forest text-white px-6 py-3 flex items-center justify-between text-xs">
+                    <span class="font-medium"><i class="fa-solid fa-map-pin text-kwt-accent mr-2"></i> Area Peta: Karang Joang KM 21, Balikpapan Utara</span>
+                    <span class="text-white/60 text-[11px]">Peta Interaktif</span>
+                </div>
+                <div class="h-80 w-full bg-gray-100">
+                    <iframe 
+                        title="Peta Lokasi Karang Joang Balikpapan"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63833.02707297316!2d116.850000!3d-1.150000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df14920268a2873%3A0x6b680749aeb9f271!2sKarang%20Joang%2C%20Balikpapan%20Utara%2C%20Balikpapan%20City%2C%20East%20Kalimantan!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ===================================================
+        K. FOOTER WEBSITE
+    =================================================== -->
+    <footer class="bg-kwt-forest text-white border-t border-white/10 pt-16 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Kolom 1: Profil Brand (Col 1-5) -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-kwt-leaf flex items-center justify-center text-white">
+                            <i class="fa-solid fa-seedling text-lg"></i>
+                        </div>
+                        <span class="font-heading font-extrabold text-2xl tracking-tight text-white">
+                            KWT<span class="text-kwt-accent">DaunSopCeria</span>
+                        </span>
+                    </div>
+
+                    <p class="font-heading italic text-emerald-200 text-sm">
+                        &ldquo;Menanam Harapan, Memanen Kebaikan.&rdquo;
+                    </p>
+
+                    <p class="text-xs text-white/70 leading-relaxed max-w-sm">
+                        Kelompok Wanita Tani yang mengembangkan potensi pertanian lokal melalui budidaya tanaman, inovasi produk, dan pemberdayaan ekonomi masyarakat di kawasan Karang Joang, Balikpapan Utara.
+                    </p>
+                </div>
+
+                <!-- Kolom 2: Navigasi Cepat (Col 6-8) -->
+                <div class="lg:col-span-3">
+                    <h4 class="font-heading font-bold text-sm text-white mb-4 uppercase tracking-wider">Navigasi Halaman</h4>
+                    <ul class="space-y-2 text-xs text-white/70">
+                        <li><a href="#beranda" class="hover:text-kwt-accent transition-colors">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-kwt-accent transition-colors">Tentang Kami</a></li>
+                        <li><a href="#kebun" class="hover:text-kwt-accent transition-colors">Kebun Kami & Vertical Garden</a></li>
+                        <li><a href="#produk" class="hover:text-kwt-accent transition-colors">Produk Unggulan</a></li>
+                        <li><a href="#kegiatan" class="hover:text-kwt-accent transition-colors">Aktivitas & Fasilitas</a></li>
+                        <li><a href="#pencapaian" class="hover:text-kwt-accent transition-colors">Pencapaian Program</a></li>
+                        <li><a href="#galeri" class="hover:text-kwt-accent transition-colors">Galeri Dokumentasi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 3: Alamat & Kontak (Col 9-12) -->
+                <div class="lg:col-span-4 space-y-3">
+                    <h4 class="font-heading font-bold text-sm text-white mb-4 uppercase tracking-wider">Sekretariat & Kebun</h4>
+                    <div class="text-xs text-white/70 space-y-1.5 leading-relaxed">
+                        <p class="text-white font-medium">KWT Daun Sop Ceria</p>
+                        <p><i class="fa-solid fa-location-dot text-kwt-accent mr-2"></i>KM 21, RT 41, Kelurahan Karang Joang</p>
+                        <p class="pl-5">Kecamatan Balikpapan Utara, Kota Balikpapan</p>
+                        <p class="pl-5">Kalimantan Timur, Indonesia</p>
+                    </div>
+
+                    <div class="pt-3">
+                        <span class="text-[11px] font-semibold text-white/80 block mb-2">Media & Jejaring:</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="openChannelNotice('WhatsApp')" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-emerald-600 flex items-center justify-center text-white transition-colors" title="WhatsApp Pengelola">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                            </button>
+                            <button onclick="openChannelNotice('Instagram')" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-pink-600 flex items-center justify-center text-white transition-colors" title="Instagram Resmi">
+                                <i class="fa-brands fa-instagram text-sm"></i>
+                            </button>
+                            <a href="#kontak" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-kwt-leaf flex items-center justify-center text-white transition-colors" title="Formulir Kontak">
+                                <i class="fa-regular fa-envelope text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Hak Cipta -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 gap-4">
+                <p>&copy; 2026 KWT Daun Sop Ceria. Seluruh Hak Dilindungi.</p>
+                <p class="text-[11px]">Website Profil Pertanian Berkelanjutan • Karang Joang, Balikpapan Utara</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- ===================================================
+        MODAL LIGHTBOX GALERI (DAPAT DIPERBESAR)
+    =================================================== -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white text-2xl hover:text-kwt-accent transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightboxImage" src="" alt="Pratinjau Foto" class="max-h-[75vh] w-auto max-w-full rounded-2xl object-contain shadow-2xl border border-white/20">
+            <div class="mt-4 text-center text-white">
+                <h4 id="lightboxTitle" class="font-heading font-bold text-lg text-kwt-accent"></h4>
+                <p id="lightboxDesc" class="text-xs text-white/80 mt-1 max-w-xl"></p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===================================================
+        MODAL INFORMASI PRODUK / NOTIFIKASI KANAL
+    =================================================== -->
+    <div id="infoModal" class="fixed inset-0 z-50 bg-black/60 hidden items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-kwt-sand">
+            <button onclick="closeInfoModal()" class="absolute top-5 right-5 text-kwt-dark/40 hover:text-kwt-dark text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div class="w-12 h-12 rounded-2xl bg-kwt-mint text-kwt-leaf flex items-center justify-center text-xl mb-4" id="modalIcon">
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+            
+            <h3 id="modalTitle" class="font-heading font-extrabold text-xl text-kwt-forest mb-2"></h3>
+            <p id="modalBody" class="text-xs sm:text-sm text-kwt-dark/70 leading-relaxed mb-6"></p>
+            
+            <div class="flex justify-end">
+                <button onclick="closeInfoModal()" class="bg-kwt-forest hover:bg-kwt-leaf text-white px-5 py-2.5 rounded-xl text-xs font-semibold transition-colors">
+                    Tutup Informasi
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===================================================
+        JAVASCRIPT INTERAKTIF & LOGIKA HALAMAN
+    =================================================== -->
+    <script>
+        // 1. Mobile Menu Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile drawer when link clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // 2. Header Scroll Effect
+        const mainHeader = document.getElementById('mainHeader');
+        const navContainer = document.getElementById('navContainer');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                navContainer.classList.add('shadow-md', 'bg-white/95');
+                navContainer.classList.remove('my-2');
+            } else {
+                navContainer.classList.remove('shadow-md', 'bg-white/95');
+                navContainer.classList.add('my-2');
+            }
+        });
+
+        // 3. Toggle Misi Detail Accordion
+        function toggleMisiDetail() {
+            const misiBox = document.getElementById('misiFullList');
+            const chevron = document.getElementById('misiChevron');
+            if (misiBox.classList.contains('hidden')) {
+                misiBox.classList.remove('hidden');
+                chevron.classList.remove('fa-angle-down');
+                chevron.classList.add('fa-angle-up');
+            } else {
+                misiBox.classList.add('hidden');
+                chevron.classList.remove('fa-angle-up');
+                chevron.classList.add('fa-angle-down');
+            }
+        }
+
+        // 4. Galeri Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update button style
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-kwt-forest', 'text-white');
+                    b.classList.add('bg-white', 'text-kwt-forest');
+                });
+                btn.classList.add('bg-kwt-forest', 'text-white');
+                btn.classList.remove('bg-white', 'text-kwt-forest');
+
+                const filter = btn.getAttribute('data-category');
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // 5. Galeri Lightbox Modal
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxDesc = document.getElementById('lightboxDesc');
+
+        function openLightbox(src, title, desc) {
+            lightboxImage.src = src;
+            lightboxTitle.textContent = title;
+            lightboxDesc.textContent = desc;
+            lightboxModal.classList.remove('hidden');
+            lightboxModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.add('hidden');
+            lightboxModal.classList.remove('flex');
+            lightboxImage.src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                closeLightbox();
+            }
+        });
+
+        // 6. Generic Info Modal (Product / Contact Channel)
+        const infoModal = document.getElementById('infoModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = document.getElementById('modalBody');
+
+        function openProductModal(title, description) {
+            modalTitle.textContent = title;
+            modalBody.innerHTML = `${description}<br><br><span class="font-semibold text-kwt-forest">Pemesanan & Jadwal Panen:</span> Silakan hubungi pengurus KWT melalui formulir pesan atau kontak resmi kelompok saat tersedia.`;
+            infoModal.classList.remove('hidden');
+            infoModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openChannelNotice(channelName) {
+            modalTitle.textContent = `Saluran Resmi ${channelName}`;
+            modalBody.textContent = `Tautan dan nomor kontak resmi ${channelName} KWT Daun Sop Ceria sedang dalam proses verifikasi akhir oleh pihak pengurus kelompok tani. Silakan gunakan formulir pesan di halaman Kontak untuk komunikasi langsung saat ini.`;
+            infoModal.classList.remove('hidden');
+            infoModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeInfoModal() {
+            infoModal.classList.add('hidden');
+            infoModal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        infoModal.addEventListener('click', (e) => {
+            if (e.target === infoModal) {
+                closeInfoModal();
+            }
+        });
+
+        // 7. Contact Form Handler (Simulasi Pengiriman Valid)
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('senderName').value;
+            const topic = document.getElementById('messageTopic').value;
+            const alertBox = document.getElementById('formSuccessAlert');
+
+            alertBox.innerHTML = `<i class="fa-solid fa-circle-check mr-1.5 text-emerald-600"></i> Terima kasih <strong>${name}</strong>, pesan Anda terkait "<strong>${topic}</strong>" telah tersimpan dan siap ditindaklanjuti oleh pengurus KWT Daun Sop Ceria.`;
+            alertBox.classList.remove('hidden');
+
+            document.getElementById('contactForm').reset();
+
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 7000);
+        }
+
+        // Close modals on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+                closeInfoModal();
+            }
+        });
+    </script>
+</body>
+</html>
